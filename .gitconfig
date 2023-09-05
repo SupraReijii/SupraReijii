@@ -1,0 +1,12 @@
+[user]
+        email = reijii.jp@icloud.com
+        name = Daniil Markov
+        signingkey = 2CE0D810233D10EA
+[commit]
+        gpgsign = true
+[init]
+        defaultBranch = master
+[core]
+        autocrlf = true
+[gpg]
+        program = /usr/bin/gpg

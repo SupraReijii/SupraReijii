@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+files = %w[
+  .gitconfig
+  .zshrc
+  .ssh/config
+  .oh-my-zsh/themes/reijii.zsh-theme
+]
+
+files.each do |file|
+  puts "symlinking #{file}"
+  `rm -f $HOME/#{file}`
+  `ln ./#{file} $HOME/#{file}`
+end
+
+conf = '.gnupg/gpg.conf'
+puts "symlinking #{conf}"
+`rm -f $HOME/#{conf}`
+`ln ./#{conf} $HOME/#{conf}`
+puts 'dont forget to write passphrase to /home/krraify/.gnupg/passphrase'
+
+puts 'done!'
